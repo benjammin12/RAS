@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="500.0" prefWidth="800.0" stylesheets="@application.css" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane fx:id="back" prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="submitSearch" layoutX="662.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="124.0" text="Submit" />
+            <Button fx:id="serverHomepage" layoutX="14.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToHome" prefHeight="30.0" prefWidth="124.0" text="Return" />
+            <TableView fx:id="tableUser" layoutX="232.0" prefHeight="419.0" prefWidth="568.0">
+              <columns>
+                <TableColumn fx:id="orderIdCell" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="seatNumberCell" prefWidth="75.0" text="Seat" />
+                  <TableColumn fx:id="itemIdCell" prefWidth="75.0" text="ItemId" />
+                  <TableColumn fx:id="itemNameCell" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="itemPriceCell" prefWidth="94.0" text="Price" />
+                  <TableColumn fx:id="itemDescriptionCell" prefWidth="160.0" text="Description" />
+              </columns>
+            </TableView>
+            <TextField editable="false" layoutX="11.0" layoutY="20.0" prefHeight="72.0" prefWidth="186.0" text="All of our orders" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutPage" mnemonicParsing="false" onAction="#loadAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="500.0" prefWidth="800.0" stylesheets="@application.css" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutPage" mnemonicParsing="false" onAction="#loadAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <Pane fx:id="back" prefHeight="469.0" prefWidth="802.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="submitSearch" layoutX="654.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cookOrder" prefHeight="30.0" prefWidth="124.0" text="Submit" />
+            <Button fx:id="serverHomepage" layoutX="14.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToHome" prefHeight="30.0" prefWidth="124.0" text="Return" />
+            <TableView fx:id="tableUser" layoutX="245.0" prefHeight="419.0" prefWidth="555.0">
+              <columns>
+                <TableColumn fx:id="orderIdCell" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="seatNumberCell" prefWidth="75.0" text="Seat" />
+                  <TableColumn fx:id="itemIdCell" prefWidth="75.0" text="ItemId" />
+                  <TableColumn fx:id="itemNameCell" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="itemPriceCell" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="itemDescriptionCell" prefWidth="179.0" text="Description" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="cookOrderId" layoutX="29.0" layoutY="123.0" prefHeight="50.0" prefWidth="135.0" />
+            <TextField layoutX="29.0" layoutY="58.0" prefHeight="34.0" prefWidth="121.0" text="Order Id to Cook" />
+            <Label fx:id="errorMessage" layoutX="29.0" layoutY="203.0" prefHeight="41.0" prefWidth="212.0" />
+         </children>
+      </Pane>
+   </left>
+</fx:root>

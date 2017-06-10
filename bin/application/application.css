@@ -1,0 +1,22 @@
+
+#placeOrder,#updateOrder,#payOrder,#submitSearch,#serverHomepage {
+	-fx-text-fill: black;
+}
+
+#placeOrder:hover, #updateOrder:hover, #payOrder:hover, #serverHomePage:hover, #submitSearch:hover,#cookOrder:hover,
+#searchOrder:hover,#deleteOrder:hover {
+	-fx-background-color:  grey ;
+}
+
+#back {
+    -fx-background-color:#f0f8ff;
+}
+
+#searchError,#itemAddedMessage,#errorMessage {
+	-fx-text-fill: red;
+	-fx-font-size:15px;
+}
+
+#orderStatusLabel {
+	-fx-text-fill: green;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="500.0" prefWidth="800.0" stylesheets="@application.css" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane fx:id="back" prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deleteOrder" layoutX="662.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="30.0" prefWidth="124.0" text="Submit" />
+            <Button fx:id="serverHomepage" layoutX="14.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToHome" prefHeight="30.0" prefWidth="124.0" text="Return" />
+            <TableView fx:id="tableUser" layoutX="358.0" layoutY="20.0" prefHeight="380.0" prefWidth="399.0">
+              <columns>
+                <TableColumn fx:id="orderIdCell" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="serverIdCell" prefWidth="75.0" text="Server ID" />
+                  <TableColumn fx:id="tableIdCell" prefWidth="75.0" text="Table ID" />
+                  <TableColumn fx:id="orderStatusCell" prefWidth="82.0" text="Status" />
+                  <TableColumn fx:id="orderTotalCell" prefWidth="91.0" text="Price" />
+              </columns>
+            </TableView>
+            <TextField editable="false" layoutX="11.0" layoutY="20.0" prefHeight="37.0" prefWidth="183.0" text="Enter Order ID to delete:" />
+            <TextArea fx:id="deleteItem" layoutX="14.0" layoutY="77.0" prefHeight="67.0" prefWidth="183.0" />
+            <Label fx:id="errorMessage" layoutX="23.0" layoutY="185.0" prefHeight="30.0" prefWidth="317.0" />
+            <Label fx:id="orderStatusLabel" layoutX="19.0" layoutY="221.0" prefHeight="30.0" prefWidth="321.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </center>
+   <top>
+           <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutPage" mnemonicParsing="false" onAction="#loadAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane fx:id="back" prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="submitSearch" layoutX="462.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="124.0" text="Submit" />
+            <Button fx:id="serverHomepage" layoutX="14.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToHome" prefHeight="30.0" prefWidth="124.0" text="Return" />
+            <TextField fx:id="RASTitle" editable="false" layoutX="246.0" layoutY="71.0" prefHeight="80.0" prefWidth="109.0" text="RAS">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </TextField>
+            <TextArea editable="false" layoutX="200.0" layoutY="151.0" prefHeight="99.0" prefWidth="238.0" text="- RAS is a fully functional &#10;   resturaunt automated &#10;   system.">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutPage" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>

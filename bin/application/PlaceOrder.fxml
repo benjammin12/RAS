@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="500.0" prefWidth="1000.0" stylesheets="@application.css" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane fx:id="back" prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="submitOrder" layoutX="862.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitOrder" prefHeight="30.0" prefWidth="124.0" text="Submit" />
+            <Button fx:id="serverHomepage" layoutX="14.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToHome" prefHeight="30.0" prefWidth="124.0" text="Return" />
+            <Label layoutX="130.0" layoutY="2.0" prefHeight="40.0" prefWidth="99.0" text="Order Info" />
+            <Label layoutX="667.0" layoutY="2.0" prefHeight="40.0" prefWidth="99.0" text="All Menu Items" />
+            <TableView fx:id="tableUser" layoutX="459.0" layoutY="42.0" prefHeight="375.0" prefWidth="515.0">
+              <columns>
+                <TableColumn fx:id="itemIdCell" prefWidth="59.0" text="ID" />
+                <TableColumn fx:id="itemNameCell" prefWidth="88.0" text="Name" />
+                  <TableColumn fx:id="itemPriceCell" prefWidth="61.0" text="Price" />
+                  <TableColumn fx:id="itemDescriptionCell" prefWidth="306.0" text="Description" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="serverId" layoutX="164.0" layoutY="71.0" prefHeight="32.0" prefWidth="154.0" />
+            <TextArea fx:id="tableId" layoutX="164.0" layoutY="127.0" prefHeight="32.0" prefWidth="154.0" />
+            <TextField layoutX="45.0" layoutY="72.0" prefHeight="30.0" prefWidth="69.0" text="ServerId" />
+            <TextField layoutX="42.0" layoutY="128.0" prefHeight="30.0" prefWidth="69.0" text="TableId" />
+            <TextField layoutX="42.0" layoutY="187.0" prefHeight="30.0" prefWidth="69.0" text="Item Id" />
+            <TextArea fx:id="itemId" layoutX="164.0" layoutY="187.0" prefHeight="32.0" prefWidth="84.0" />
+            <Button fx:id="addItem" layoutX="280.0" layoutY="188.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="124.0" text="Add Item" />
+            <Label fx:id="errorMessage" layoutX="68.0" layoutY="277.0" prefHeight="40.0" prefWidth="390.0" />
+            <Label fx:id="itemAddedMessage" layoutX="45.0" layoutY="236.0" prefHeight="40.0" prefWidth="412.0" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+           <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutPage" mnemonicParsing="false" onAction="#loadAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>

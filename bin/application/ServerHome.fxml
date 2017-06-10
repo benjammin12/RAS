@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <Pane fx:id="back" prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="placeOrder" layoutX="208.0" layoutY="244.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeScenePlaceOrder" prefHeight="45.0" prefWidth="185.0" text="Place Order" />
+            <TextArea fx:id="textDisplay" layoutX="193.0" layoutY="61.0" prefHeight="57.0" prefWidth="216.0" text="Welcome Server ID#" />
+            <Button fx:id="updateOrder" layoutX="208.0" layoutY="310.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneUpdateOrder" prefHeight="45.0" prefWidth="185.0" text="View Uncooked Orders" />
+            <Button fx:id="payOrder" layoutX="208.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeScenePayOrder" prefHeight="45.0" prefWidth="185.0" text="Pay Order" />
+            <Button fx:id="cookOrder" layoutX="208.0" layoutY="372.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneCookOrder" prefHeight="45.0" prefWidth="185.0" text="Cook Order" />
+            <Button fx:id="searchOrder" layoutX="8.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneSearchOrder" prefHeight="45.0" prefWidth="185.0" text="Search" />
+            <Button fx:id="deleteOrder" layoutX="409.0" layoutY="179.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSceneDeleteOrder" prefHeight="45.0" prefWidth="185.0" text="Delete" />
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+          <MenuBar prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#quit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutPage" mnemonicParsing="false" onAction="#loadAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>
